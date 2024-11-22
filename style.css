@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+*
+{
+	margin: 0;
+	padding: 0;
+	text-transform: capitalize;
+
+}
+body{
+	width: 100%;
+	font-family: 'Poppins', sans-serif;
+	background:#B43F11;
+	transition: 2s linear;
+	
+}
+.btn 
+{
+	margin-top: 1rem;
+	display: inline-block;
+	padding: 0.8rem 3rem;
+	color:#fff;
+	background:#B43F11;
+	font-size:1.7rem;
+	cursor: pointer;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+	border:0.1rem solid rgba(0,0,0,0.7);
+}
+
+.btn:hover{
+    background: #222;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+/*header section*/
+
+header
+{
+	height: 80px;
+	background-color: #833517;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+header .logo i 
+{
+	color: black;
+	font-size: 2rem;
+}
+header .logo
+{
+	color: white;
+	font-size: 1.6rem;
+	text-decoration: none;
+	font-weight: bolder;
+}
+header nav
+{
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 15px;
+
+}
+header nav a 
+{
+	text-decoration: none;
+	color: white;
+	font-size: 1.02rem;
+	font-weight: normal;
+}
+header nav a:hover
+{
+	color: #222;
+}
+header .icons 
+{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	font-size: 1.5rem;
+}
+header .icons div:hover
+{
+	color: #222;
+}
+header .icons #menu-btn
+{
+	display: none;
+}
+
+section
+{
+	padding: 3rem 9%;
+}
+/*home section*/
+
+.home
+{
+	padding-top: 8rem;
+	background: url(home-bg1.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+
+}
+.home .slides-container .slide 
+{
+	display: flex;
+	align-items: center;
+	gap:1.5rem;
+	justify-content: space-between;
+}
+.home .slides-container .slide .content span 
+{
+	color: #000;
+	font-size: 1.5rem;
+}
+.home .slides-container .slide .content h3 
+{
+	color: #000;
+	font-size: 4rem;
+	font-weight: bolder;
+}
+.home .slides-container .slide .img{
+    flex: 1 1 40rem;
+    margin: 3rem 0;
+}
+
+
+.home .slides-container .slide .img img 
+{
+	width:100%;
+}
+
+/*media query*/
+
+
+@media(max-width:768px)
+{
+	header .icons #menu-btn
+	{
+		display: inline-block;
+	}
+	header nav
+	{
+      position: absolute;
+      top: 14.5%;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      background: #222;
+
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      padding: 20px 0px;
+	}
+	header nav.active
+	{
+		clip-path: polygon(0 0, 100% 0, 100% 100%,0% 100%);
+	}
+	header nav a 
+	{
+		border: 1px solid #833517;
+		width: 90%;
+		background: #833517;
+		padding: 10px 0px;
+		border-radius: 7px;
+		padding-left: 20px;
+
+
+
+
+	}
+
+}
+@media(max-width:1200px)
+{
+	.home .slides-container .slide .content h3 
+	{
+		width: 30rem;
+	}
+}
